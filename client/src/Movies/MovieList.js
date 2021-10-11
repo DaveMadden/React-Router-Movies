@@ -1,6 +1,9 @@
 import React from 'react';
 
 export default function MovieList(props) {
+
+  if (!props.movies) return <h3>loading movies</h3>;
+  
   return (
     <div className="movie-list">
       {props.movies.map(movie => (
